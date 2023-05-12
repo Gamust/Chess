@@ -16,3 +16,6 @@
 ## READABILITY
 - Improve the readability of the code and change comments.
 
+## TESTING
+- Create test to be sure that there are no moves against the rules.
+
