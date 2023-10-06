@@ -3,7 +3,7 @@
 ## PIECES
 
 ### KING
-- The king cannot castle through a chest.
+- The king cannot castle through a check.
 
 ## FUNCTIONS
 - Solve the problems with the checks
@@ -12,6 +12,7 @@
   
 ## GAME
 - Solve performance issues
+- Complete Fen string function
 
 ## READABILITY
 - Improve the readability of the code and change comments.

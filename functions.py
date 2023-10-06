@@ -1,6 +1,9 @@
 import Pieces
 import random
 
+
+
+# Gets the positions from a Fen string.
 def get_position(position):
     rows = position.split("/")
     printing_position = []
@@ -49,6 +52,13 @@ def get_position(position):
 
     return printing_position
 
+
+# After inputing a Fen string it gives back al the components to be read by other functions
+# the return is: 
+# - position of pieces
+# - which team turn it is
+# - posibility to castle
+# - if there is any enpassant
 def Fen(Fen_string):
     field = Fen_string.split()
 
@@ -60,7 +70,8 @@ def Fen(Fen_string):
 
     return (positions,turn,0,0,0,0)
 
-    
+
+
 def change_turn(turn):
     if turn:
         turn = 0
@@ -68,14 +79,16 @@ def change_turn(turn):
         turn = 1
         
     return turn
-    
+
+
+# Makes the commputer make random moves
 def randcomputer(board,team):
     possible_pieces = []
     pawns = []
-    for index,aa in enumerate(board):
-        if aa != "empty":
-            if aa.team == team:
-                possible_pieces.append((index,aa))
+    for square,piece_in_board in enumerate(board):
+        if piece_in_board != "empty":
+            if piece_in_board.team == team:
+                possible_pieces.append((square,piece_in_board))
 
     correct = 1
     while correct == 1:
@@ -102,6 +115,7 @@ def randcomputer(board,team):
 
 
     return board
+
 
 
 def piece_movement(current_cell,next_positions,board):
