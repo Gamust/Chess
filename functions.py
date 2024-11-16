@@ -1,6 +1,7 @@
 import Pieces
 import random
-
+import pygame
+import configuration
 
 
 # Gets the positions from a Fen string.
@@ -53,7 +54,7 @@ def get_position(position):
     return printing_position
 
 
-# After inputing a Fen string it gives back al the components to be read by other functions
+# After inputing a Fen string it gives back all the components to be read by other functions
 # the return is: 
 # - position of pieces
 # - which team turn it is

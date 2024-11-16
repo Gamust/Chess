@@ -48,12 +48,17 @@ def checks(board, current_cell):
 
     return moves
 
-
+# Takes the board and turn to see if the game ended or not
+# it returns:
+# 0 = ongoing
+# 1 = winner
+# 2 = tie
 def checkmate(board, turno):
     turno = functions.change_turn(turno)
     if len(functions.all_moves_check(turno,board)) == 0:
         return 1
     else:
+        # check if it is a tie
         amount_of_pieces = 0
         for aa in board:
             if aa != "empty":
